@@ -4,6 +4,8 @@ import CartProductList from './CartProductList';
 import { StyledCartModalBox } from './style';
 import { StyledParagraph, StyledTitle } from '../../styles/typography';
 
+
+
 const CartModal = () => (
   <StyledCartModalBox>
     <dialog>

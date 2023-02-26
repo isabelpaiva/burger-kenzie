@@ -3,7 +3,7 @@ import { StyledParagraph } from '../../../styles/typography';
 
 const Input = () => (
   <fieldset>
-    <StyledTextField label='Teste' type='text' />
+    <StyledTextField/>
     <StyledParagraph fontColor='red'>Erro</StyledParagraph>
   </fieldset>
 );

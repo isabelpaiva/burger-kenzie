@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     border: none;
     list-style: none;
     text-decoration: none;
+  
   }
 
   button{
@@ -15,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   dialog{
-    display: unset;
+    display: none;
     position: unset;
   }
 `;
