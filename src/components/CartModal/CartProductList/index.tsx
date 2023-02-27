@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import CartProductCard from './CartProductCard';
 
 import { StyledCartProductList } from './style';

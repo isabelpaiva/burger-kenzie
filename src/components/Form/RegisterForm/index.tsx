@@ -1,68 +1,91 @@
+import React, { useContext } from 'react';
+import Input from '../Input';
+import { UserContext } from '../../../providers/UserContext';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { useContext } from 'react';
-import Input from '../Input';
 import { StyledButton } from '../../../styles/button';
 import { StyledForm } from '../../../styles/form';
-import { UserContext } from '../../../providers/UserContext';
 import { Iregister } from '../../../providers/@types';
 
-const schema = yup
-  .object({
-    name: yup.string().required('O nome é obrigatório.'),
-    email: yup.string().email().required('O email é obrigatório.'),
-    password: yup
-      .string()
-      .matches(/.{8}/, 'Deve conter no mínimo 8 caracteres.')
-      .required('Senha Obrigatoria.'),
-    passwordConfirmation: yup
-      .string()
-      .oneOf([yup.ref('password')], 'As duas senhas devem ser iguais.')
-      .required('Confirmação de senha é obrigatória'),
-  })
-  .required();
+
+const schema = yup.object().shape({
+  name: yup
+    .string()
+    .required("Nome obrigatório")
+    .min(3, "O nome precisa ter pelo menos 3 caracteres.")
+    .max(200, "O nome pode ter no máximo 200 caracteres."),
+
+  email: yup
+    .string()
+    .required("Email obrigatório")
+    .email("É necessário fornecer um email válido."),
+
+  password: yup
+    .string()
+    .required("Senha obrigatória")
+    .matches(/(?=.*?[A-Z])/, "É necessário pelo menos uma letra maiúscula.")
+    .matches(/(?=.*?[a-z])/, "É necessário pelo menos uma letra minúscula.")
+    .matches(/(?=.*?[0-9])/, "É necessário pelo menos um número.")
+    .matches(
+      /(?=.*?[#?!@$%^&*-])/,
+      "É necessário pelo menos um caractere especial."
+    )
+    .min(8, "É necessário uma senha de pelo menos 8 caracteres."),
+
+   passwordConfirmed: yup
+    .string()
+    .required("Confirme sua senha")
+    .oneOf([yup.ref("password"), "As senhas não coincidem"], "As senhas não coincidem")
+});
 
 function RegisterForm() {
   const { userRegister } = useContext(UserContext);
 
   const {
-    register,
+    register,   
     handleSubmit,
     formState: { errors },
   } = useForm<Iregister>({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(schema)
   });
 
   return (
     <StyledForm onSubmit={handleSubmit(userRegister)}>
-      <Input
-        type='text'
-        label='Nome'
-        placeholder='Digite aqui seu nome'
-        errors={errors.name?.message}
-        {...register('name')}
+     <Input
+        label="Nome"
+        type="text"
+        placeholder="Digite seu nome"
+        defaultValue=""
+        register={register}
+        name="name"
+        errors={errors.name}
       />
       <Input
-        label='Email'
-        type='text'
-        placeholder='Digite aqui seu email'
-        errors={errors.email?.message}
-        {...register('email')}
+        label="E-mail"
+        type="email"
+        placeholder="Digite seu e-mail"
+        defaultValue=""
+        register={register}
+        name="email"
+        errors={errors.email}
       />
       <Input
-        label='Senha'
-        type='password'
-        placeholder='Digite aqui sua senha'
-        errors={errors.password?.message}
-        {...register('password')}
+        label="Senha"
+        type="password"
+        placeholder="Digite sua senha"
+        register={register}
+        name="password"
+        errors={errors.password}
       />
       <Input
-        label='Confirmar senha'
-        type='password'
-        placeholder='Confirme sua senha'
-        errors={errors.passwordConfirmation?.message}
-        {...register('passwordConfirmation')}
+        label="Confirmar senha"
+        type="password"
+        placeholder="Confirme sua senha"
+        defaultValue=""
+        register={register}
+        name="passwordConfirmed"
+        errors={errors.passwordConfirmed}
       />
       <StyledButton type='submit' $buttonSize='default' $buttonStyle='gray'>
         Cadastrar

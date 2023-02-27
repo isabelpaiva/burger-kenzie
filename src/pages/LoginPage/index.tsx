@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import { StyledLoginPage } from './style';
 import LoginForm from '../../components/Form/LoginForm';
 import IllustrationBox from '../../components/IllustrationBox';

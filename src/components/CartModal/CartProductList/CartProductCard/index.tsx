@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import { MdDelete } from 'react-icons/md';
 
 import { StyledCartProductCard } from './style';

@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import { StyledIllustrationBox } from './style';
 import LogoKenzieBurguer from '../../assets/LogoKenzieBurguer.svg';
 import BallsIllustration from '../../assets/BallsIllustrations.svg';

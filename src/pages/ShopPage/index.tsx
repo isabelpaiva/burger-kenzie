@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import { StyledShopPage } from './style';
 import CartModal from '../../components/CartModal';
 import Header from '../../components/Header';

@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import { MdSearch } from 'react-icons/md';
 import { StyledSearchForm } from './style';
 import { StyledButton } from '../../../styles/button';
