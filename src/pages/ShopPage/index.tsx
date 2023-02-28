@@ -8,7 +8,7 @@ import { StyledContainer } from '../../styles/grid';
 
 const ShopPage = () => (
   <StyledShopPage>
-    <CartModal />
+   
     <Header />
     <main>
       <StyledContainer containerWidth={1300}>
