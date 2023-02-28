@@ -4,6 +4,8 @@ import {ReactNode } from "react";
 export interface Iprovider {
     children: ReactNode;
 }
+
+
 export interface Ilogin {
     email: string;
     password: string;
@@ -26,7 +28,6 @@ export interface IUserContext {
 export interface ICartContext {
    products: iProducts[]
    setProducts: (products: iProducts[]) => void;
-
    
 }
 

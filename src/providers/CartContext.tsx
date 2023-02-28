@@ -8,7 +8,7 @@ export const CartContext = createContext({} as ICartContext);
 
 export const CartProvider = ({ children }: Iprovider) => {
     const [products, setProducts] = useState<iProducts[]>([]);
-    const [isOpen, setIsOpen] = useState(false);
+
 
    const navigate = useNavigate()
    const token: any = localStorage.getItem('@TOKEN')
