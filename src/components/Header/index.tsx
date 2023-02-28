@@ -8,6 +8,7 @@ import { StyledContainer } from "../../styles/grid";
 import { UserContext } from "../../providers/UserContext";
 import CartModal from "../CartModal";
 
+
 const Header = () => {
   const { logoutDashboard } = useContext(UserContext);
   const [isCartModalOpen, setIsCartModalOpen] = useState(false); // novo estado
@@ -29,8 +30,8 @@ const Header = () => {
             alt="Kenzie Burguer Logo"
             className="logo"
           />
-          <nav className="nav" role="navigation">
-            <SearchForm />
+         <nav className='nav' role='navigation'>
+          <SearchForm />
             <div className="buttons">
               <button type="button" onClick={handleOpenCartModal}> {/* adiciona a função de abrir o modal */}
                 <MdShoppingCart size={28} />

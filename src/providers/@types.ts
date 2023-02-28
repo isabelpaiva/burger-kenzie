@@ -45,7 +45,7 @@ export interface iProductsProps {
 
 
   export interface CartModalProps  {
-  onClose: () => void
+  onClose: () => any
   }
   
 
