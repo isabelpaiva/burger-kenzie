@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledRegisterPage = styled.main`
   display: flex;
@@ -45,7 +45,7 @@ export const StyledRegisterPage = styled.main`
 
     @media (max-width: 750px) {
       .left {
-        display: none;
+        display: ;
       }
     }
   }

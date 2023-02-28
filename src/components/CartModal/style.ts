@@ -12,7 +12,7 @@ export const StyledCartModalBox = styled.div`
 
     background: rgba(51, 51, 51, .5);
     z-index: 1001;
-    display: none;
+   
 
     dialog{
         animation: ${AnimationFadeIn} .5s;

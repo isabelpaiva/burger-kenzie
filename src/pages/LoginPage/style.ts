@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledLoginPage = styled.main`
   display: flex;
@@ -38,7 +38,7 @@ export const StyledLoginPage = styled.main`
     @media (max-width: 750px) {
       flex-direction: column-reverse;
       .ballsImage {
-        display: none;
+        display: ;
       }
     }
   }

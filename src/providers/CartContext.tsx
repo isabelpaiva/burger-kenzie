@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { Iprovider, ICartContext } from './@types';
 import api from '../services/api';
 import { useNavigate } from 'react-router-dom';
@@ -8,6 +8,8 @@ export const CartContext = createContext({} as ICartContext);
 
 export const CartProvider = ({ children }: Iprovider) => {
     const [products, setProducts] = useState<iProducts[]>([]);
+    const [isOpen, setIsOpen] = useState(false);
+
    const navigate = useNavigate()
    const token: any = localStorage.getItem('@TOKEN')
 
@@ -28,8 +30,9 @@ export const CartProvider = ({ children }: Iprovider) => {
     getItem()
   }, [token])
 
+
   return (
-    <CartContext.Provider value={{ products, setProducts }}>
+    <CartContext.Provider value={{ products, setProducts,}}>
       {children}
     </CartContext.Provider>
   );

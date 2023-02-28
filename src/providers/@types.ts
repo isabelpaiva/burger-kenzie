@@ -26,6 +26,8 @@ export interface IUserContext {
 export interface ICartContext {
    products: iProducts[]
    setProducts: (products: iProducts[]) => void;
+
+   
 }
 
 export interface iProducts {
@@ -34,4 +36,17 @@ export interface iProducts {
     category: string;
     price: number;
     img: string;
+    
 }
+
+export interface iProductsProps {
+    product: iProducts;
+  }
+
+
+  export interface CartModalProps  {
+  onClose: () => void
+  }
+  
+
+

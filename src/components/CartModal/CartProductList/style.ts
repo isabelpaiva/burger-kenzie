@@ -14,7 +14,7 @@ export const StyledCartProductList = styled.div`
    }
 
    .totalBox {
-    display: none;
+ 
       padding: 20px 0;
       display: flex;
       align-items: center;
