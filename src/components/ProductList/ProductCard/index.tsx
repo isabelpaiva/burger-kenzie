@@ -5,12 +5,12 @@ import { StyledParagraph, StyledTitle } from "../../../styles/typography";
 import { CartContext } from "../../../providers/CartContext";
 
 export const ProductCard = ({}) => {
-  const { products } = useContext(CartContext);
+  const { products, itemFilterSearch, addBurguer } = useContext(CartContext);
   console.log(products);
 
   return (
     <>
-      {products.map((item: any) => {
+      {itemFilterSearch.map((item: any) => {
         const { id, name, category, img, price } = item;
 
         return (
@@ -23,8 +23,8 @@ export const ProductCard = ({}) => {
                 {name}
               </StyledTitle>
               <StyledParagraph className="category">{category}</StyledParagraph>
-              <StyledParagraph className="price">R$: {price}</StyledParagraph>
-              <StyledButton $buttonSize="medium" $buttonStyle="green">
+              <StyledParagraph className="price">{price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</StyledParagraph>
+              <StyledButton onClick={() => addBurguer(item)} $buttonSize="medium" $buttonStyle="green">
                 Adicionar
               </StyledButton>
             </div>

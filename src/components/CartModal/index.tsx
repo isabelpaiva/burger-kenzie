@@ -5,9 +5,11 @@ import CartProductList from './CartProductList';
 import { StyledCartModalBox } from './style';
 import { StyledParagraph, StyledTitle } from '../../styles/typography';
 import { CartModalProps } from "../../providers/@types";
+import { useContext } from "react";
 
 
 const CartModal =  ({ onClose }: CartModalProps) =>  { // recebe a função onClose como prop
+  
   return (
     <StyledCartModalBox>
       <dialog>

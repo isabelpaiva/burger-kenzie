@@ -28,7 +28,14 @@ export interface IUserContext {
 export interface ICartContext {
    products: iProducts[]
    setProducts: (products: iProducts[]) => void;
-   
+   dataInput: string;
+   setDataInput: (dataInput: string) => void;
+   searchItem: (event: React.ChangeEvent | any) => void,
+   itemFilterSearch: iProducts[];
+   addBurguer: (product: iProducts) => void;
+   removeBurguer: (product: iProducts) => void;
+   productCarts: iProducts[];
+   removeAll: () => void;
 }
 
 export interface iProducts {
