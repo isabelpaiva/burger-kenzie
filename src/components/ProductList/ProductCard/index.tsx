@@ -6,7 +6,7 @@ import { CartContext } from "../../../providers/CartContext";
 
 export const ProductCard = ({}) => {
   const { products, itemFilterSearch, addBurguer } = useContext(CartContext);
-  console.log(products);
+
 
   return (
     <>
