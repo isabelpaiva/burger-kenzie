@@ -6,10 +6,8 @@ import { CartProvider } from "./providers/CartContext";
 import { ToastContainer, toast } from "react-toastify";
  import 'react-toastify/dist/ReactToastify.css';
 
-
 const App = () => (
   <div>
- 
       <UserProvider>
         <CartProvider>
           <GlobalStyles />
@@ -17,7 +15,6 @@ const App = () => (
           <Router />
         </CartProvider>
       </UserProvider>
-      
   
   </div>
 );

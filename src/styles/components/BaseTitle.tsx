@@ -1,4 +1,3 @@
-import React from 'react';
 import { ReactNode } from 'react';
 
 interface IBaseTitleProps {
@@ -7,7 +6,7 @@ interface IBaseTitleProps {
   className?: string;
 }
 
- export const BaseTitle = ({ children, tag, className }: IBaseTitleProps) => (
+const BaseTitle = ({ children, tag, className }: IBaseTitleProps) => (
   <>
     {tag === 'h1' && <h1 className={className}>{children}</h1>}
     {tag === 'h2' && <h2 className={className}>{children}</h2>}

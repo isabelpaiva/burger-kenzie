@@ -18,8 +18,8 @@ export const UserProvider = ({ children }: Iprovider) => {
 
   const userLogin = async (data: Ilogin) => {
     try {
-      sucessLogin()
       const response = await api.post('login', data);
+      sucessLogin()
       localStorage.setItem('@TOKEN', response.data.accessToken);
       localStorage.setItem(
         '@USER',
@@ -33,8 +33,9 @@ export const UserProvider = ({ children }: Iprovider) => {
 
   const userRegister: SubmitHandler<Iregister> = async (data) => {
     try {
-      sucessRegister()
       const response = await api.post('users', data);
+      sucessRegister()
+      
       navigate('/');
     } catch (error) {
       console.log(error);
@@ -42,6 +43,7 @@ export const UserProvider = ({ children }: Iprovider) => {
   };
 
   const logoutDashboard: () => void = () => {
+ 
     window.localStorage.clear()
     navigate('/') 
   }
@@ -52,3 +54,6 @@ export const UserProvider = ({ children }: Iprovider) => {
     </UserContext.Provider>
   );
 };
+
+
+

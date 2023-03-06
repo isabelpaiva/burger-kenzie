@@ -24,15 +24,6 @@ const CartModal =  ({ onClose }: CartModalProps) =>  { // recebe a função onCl
         </header>
         <div className="cartBox">
           <CartProductList />
-
-          <div className="emptyBox">
-            <StyledTitle tag="h3" $fontSize="three" textAlign="center">
-              Sua sacola está vazia
-            </StyledTitle>
-            <StyledParagraph textAlign="center">
-              Adicione itens
-            </StyledParagraph>
-          </div>
         </div>
       </dialog>
     </StyledCartModalBox>
