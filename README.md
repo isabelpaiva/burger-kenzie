@@ -23,3 +23,5 @@ O Burger Hub oferece as seguintes funcionalidades:
 - **Requisições HTTP à API da hamburgueria utilizando Axios**: Integração com a API da hamburgueria para realizar operações como busca de hambúrgueres, envio de pedidos, etc.
 - **Utilização de animações e transições suaves com Framer Motion + Keyframes**: Adição de animações e transições suaves para melhorar a interatividade e o visual da aplicação.
 - **Responsividade**: O Burger Hub foi projetado para ser totalmente responsivo, adaptando-se perfeitamente a diferentes tamanhos de tela, desde smartphones até desktops.
+
+**Deploy da aplicação:** https://kenzie-burguer-v2-template-isabelpaiva.vercel.app/
