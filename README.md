@@ -7,7 +7,6 @@
 - **Typescript**
 - **ContextAPI**
 - **Validação de formulários com yup + schema**
-- **Material UI**
 - **Axios**
 - **Responsividade Mobile First**
 
