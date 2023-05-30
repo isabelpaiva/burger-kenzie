@@ -1,4 +1,4 @@
-# Burger Hub
+# Burger Kenzie
 
 ## Tecnologias Utilizadas
 
