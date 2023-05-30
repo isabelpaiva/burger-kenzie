@@ -9,7 +9,6 @@
 - **Validação de formulários com yup + schema**
 - **Material UI**
 - **Axios**
-- **Framer Motion + Keyframes**
 - **Responsividade Mobile First**
 
 ## Funcionalidades
