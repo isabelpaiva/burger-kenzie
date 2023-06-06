@@ -2,7 +2,7 @@
 
 ## Funcionalidades
 
-O Burger Hub oferece as seguintes funcionalidades:
+O Burguer Kenzie oferece as seguintes funcionalidades:
 
 - **Login e cadastro de usuário**: Os usuários podem se autenticar na aplicação ou criar uma nova conta.
 - **Proteção de rotas**: Determinadas rotas da aplicação são protegidas e só podem ser acessadas por usuários autenticados.
